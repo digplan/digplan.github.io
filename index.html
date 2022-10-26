@@ -1,42 +1,4 @@
-<script src='enigmatic-0.9.js'></script>
-
-<meta data='//worldclockapi.com/api/json/utc/now'>
-<meta name='mydb2' data='https://restbin-iwgv042975uv.runkit.sh/'>
-<meta name='mydb3' data='http://localhost:8000/' events='events'>
-
-<body class='margins'>
-
-  <section class='padding margins'>
-    <modal render='JSON.stringify(data, null, 2)'>
-      <icon kind='visibility'></icon>
-    </modal>
-    <div class='forty print'>enigmatic</div>
-    <div data='currentDateTime'></div>
-  </section>
-
-  <section>
-    <input /><div id='m'></div>
-  </section>
-vv
-</body>
-
-
-<script>
-  function eReady() {
-    data.welcome = 'Enigmatic v0.9!'
-    var a = ['alpha', 'beta', 'gamma']
-    var e = $('input')[0]
-
-    e.onkeyup = () => { 
-      if(!e.value) return
-      var f = a.map((i) => {
-           var mat = i.toString().match(RegExp(e.value, 'i'))
-           var ret = mat ? i.replace(e.value, `<b>${e.value}</b>`) : null
-           return ret
-      }).filter((e)=>e)
-
-      $('#m')[0].innerHTML = f
-    }
-
-  }
-</script>
+<script src='https://unpkg.com/enigmatic'></script>
+<link rel=stylesheet href='https://unpkg.com/enigmatic/enigmatic.css>
+                           
+<div class='bg-blue'>digplan.github.io</div>
